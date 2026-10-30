@@ -79,10 +79,12 @@ A starting list of common India cards is in library/india-cards.json. Inside an 
 
 Before you suggest a card or a rupee figure:
 
-- Open the issuer's current page. If it differs from the file, use the page. Then update that card: the changed fields, source_url, fetched_on, last_updated, and a short note of what changed.
+- If you do not already know every card they hold, ask. That question changes the suggestion. Use the cards named on the uploaded statements, then ask whether the list is complete. Do not assume a card they have not mentioned.
+- Open the issuer's current page. If it differs from the file, use the page. Then update india-cards.json. In this repository the file is library/india-cards.json. Inside an installed skill it is references/india-cards.json. Set source_url, fetched_on, and last_updated. Add a short note of what changed. Add a card that was not in the file the same way. Do not add a card with no source URL or fetch date. If the chat cannot edit the file, print the JSON entry and say it belongs in india-cards.json.
+- Compare each purchase with the cards they already hold, not only with a new card. If a transaction was paid on card A, and card B which they hold has a higher sourced rate for that merchant, say so on that transaction: the date, the merchant, the amount, what card A earned, and what card B would have earned. Example: a Swiggy or Instamart order paid on another card, while they hold the Swiggy HDFC Bank Credit Card. The Swiggy HDFC 10% rule names Swiggy food, Instamart, and Dineout. It does not name Zomato. Zomato is on other cards in the file, such as HDFC Millennia and Axis ACE. Use the card whose sourced rule names the merchant.
 - Use only the statements uploaded. Name the months they cover. If you scale one month to a year, say that you did.
 - Look for spend on the base rate, spend that earned nothing, and spend above a cap. For quick commerce, check Swiggy Instamart, Zepto, Blinkit, and similar apps. Suggest a card for a merchant only when a sourced rule names that merchant. If the file has no rate, search. Do not invent one.
-- Compute in code: extra reward on the rerouted spend, minus the extra fee including tax, minus what those transactions already earned. Show the formula.
+- Compute in code: extra reward on the rerouted spend, minus the extra fee including tax, minus what those transactions already earned. Show the formula. For a card they already hold, the extra fee is zero.
 - Ask if they could have put that spend on the other card during the months in the statements. Call the result a potential saving on that period, not a promise.
 - Do not tell them to spend more in order to earn rewards.
 
@@ -148,6 +150,7 @@ If they ask what you can do, what your capabilities are, or what this is for, an
 - Check fees and charges: annual fee and any waiver, tax, late fees, forex, and interest. Separate a fee that is charged and later reversed from a real error.
 - Draft a complaint email only after they say yes, with expected points, received points, and the calculation.
 - Suggest another card only when the uploaded statements support it. Start from the card library, then check the bank's website. Give a potential saving in rupees for the months actually uploaded, and ask if they could have moved that spend.
+- If they already hold a better card for a purchase, say what that purchase would have earned on the card they hold. Ask which cards they have when the statements do not show the full set.
 - Call out quick-commerce or other merchant spend that earned little or nothing. Name a card only when a sourced rule covers that merchant.
 - Plan the month: which card for which category, how much cap room is left, and which month-end dates to avoid for capped spend.
 

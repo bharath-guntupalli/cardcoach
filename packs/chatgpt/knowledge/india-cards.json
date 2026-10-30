@@ -3,7 +3,7 @@
   "country": "IN",
   "currency": "INR",
   "fetched_on": "2026-10-30",
-  "how_to_use": "Starting point only. Before a suggestion, open the issuer page. If it differs, use the page and update this card: figures, source_url, fetched_on, last_updated, and notes. Savings use only the uploaded statements. Name those months. Compute extra reward minus extra fee including tax, minus rewards already earned. Ask if they could have routed that spend. Do not tell them to spend more.",
+  "how_to_use": "Starting point only. Ask which cards they hold if the statements do not list them all. Before a suggestion, open the issuer page. If you find a new card, or a fee or reward line that differs from this file, update this entry: figures, source_url, fetched_on, last_updated, and notes. In the repository the file is library/india-cards.json. Do not add a card without a source URL and a fetch date. If a purchase was made on a card they hold, and another card they hold names that merchant at a higher sourced rate, say what they would have earned on that transaction. A fee they already pay on a card they hold is not an extra fee. Savings use only the uploaded statements. Name those months. Do not tell them to spend more.",
   "quick_commerce": {
     "named_in_this_file": ["Swiggy", "Swiggy Instamart", "Zomato"],
     "not_named_as_of_fetched_on": ["Zepto", "Blinkit"],
