@@ -1,12 +1,12 @@
 # Share CardCoach
 
-Send people this repository. They download a zip from `dist` and install it on their own account. `dist` is short for distribution. It is the download folder. `canon` is the master copy of the instructions. Friends do not need to open it.
+Open this repository on your phone or computer, download a zip from `dist`, and install it on your own account. `dist` is short for distribution. It is the download folder. `canon` is the master copy of the instructions. You do not need to open it.
 
 Their statements stay in their own chat. The zip has instructions and the maths only. Do not put a statement, a password, or a full card number into a Gem, a skill, or a project you then share.
 
 Product help below was fetched on 30 Oct 2026.
 
-## What a friend does
+## What you do
 
 ### Gemini
 
@@ -76,11 +76,11 @@ Do not set a project to "Anyone with the link." [Projects help](https://help.ope
 
 ### Claude
 
-Upload `dist/cardcoach-claude.zip` once to confirm it loads. Friends use the same zip from this repository. A personal account has no share URL.
+Upload `dist/cardcoach-claude.zip` once to confirm it loads. Each user downloads the same zip from this repository. A personal account has no share URL.
 
 ### Gemini
 
-Upload `dist/cardcoach-gemini.zip` the same way a friend does.
+Upload `dist/cardcoach-gemini.zip` the same way any other user does.
 
 Until 17 Nov 2026 you can also make a Gem. Paste [packs/gemini/GEM_INSTRUCTIONS.txt](packs/gemini/GEM_INSTRUCTIONS.txt), upload `CARDCOACH.md` as knowledge, and share it as Viewer with specific people or "Anyone with the link." Do not choose Public, and do not make anyone an Editor. [Share a Gem](https://support.google.com/gemini/answer/16504957) shows the instructions and knowledge files to anyone with access. Chats stay separate unless you share a chat.
 

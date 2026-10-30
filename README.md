@@ -8,7 +8,7 @@ https://github.com/bharath-guntupalli/cardcoach
 
 Keep statements, passwords, and full card numbers out of this repository. Put a statement only in your own chat.
 
-## For friends
+## Use it on your phone
 
 1. Open this repository.
 2. Download one zip from the `dist` folder. The name is short for distribution. That folder is the one with the files you install. You can ignore the rest.
