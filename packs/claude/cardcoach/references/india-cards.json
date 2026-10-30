@@ -283,6 +283,116 @@
       "fetched_on": "2026-10-30",
       "last_updated": "2026-10-30",
       "notes": "Fee is sourced. The reward rate is incomplete on purpose."
+    },
+    {
+      "id": "sbi-bpcl-octane",
+      "name": "BPCL SBI Card Octane",
+      "issuer": "SBI Card",
+      "segments": ["fuel", "groceries", "dining", "movies"],
+      "joining_fee_inr": 1499,
+      "annual_fee_inr": 1499,
+      "fee_note": "Plus applicable taxes. Renewal of 1499 waived on annual spends of 200000 or more in the preceding year. MITC correct as on 23 Oct 2026.",
+      "rewards": [
+        "BPCL fuel: 25 reward points per 100 rupees, max 2500 points per statement cycle. The booklet calls this 7.25% value back, made of the points plus a fuel surcharge waiver. Other retail spends are 1 point per 100 rupees, and 1 point equals 0.25 rupee. Do not treat 25 points as 25% cash.",
+        "Bharat Gas website and app only: 25 points per 100 rupees, cap 500 points per billing cycle.",
+        "Groceries MCC 5411, departmental stores 5311, movies 7832 and 7922, dining 5812, 5813, and 5814: the booklet says 10X points on every 100 rupees, with a combined cap of 7500 points a month. It does not spell 10X out as a percent. Use 1 point = 0.25 rupee only where the booklet states that rate.",
+        "Fuel surcharge waiver on BPCL transactions up to 4000 rupees, max 100 rupees a month. Not on fuel paid by UPI on the RuPay card. A line in the same section says points can be earned for a maximum spend of 10000 rupees a month. Read that cap against the fuel section before applying it to groceries or dining."
+      ],
+      "good_for": ["BPCL", "Bharat Gas", "groceries", "dining", "movies"],
+      "source_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf",
+      "also_see": [
+        "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/most-important-terms-and-conditions/mitc-english.pdf"
+      ],
+      "source_as_of": "2026-10-23",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "kiwi-rupay",
+      "name": "Kiwi RuPay Credit Card",
+      "issuer": "Issued through partner banks on the Kiwi app. Confirm the bank on the user's card.",
+      "segments": ["upi", "scan-and-pay"],
+      "joining_fee_inr": 0,
+      "annual_fee_inr": 0,
+      "fee_note": "gokiwi.in calls the card lifetime free, with no annual fee. A PNB page for a KIWI co-branded card lists a different fee: virtual card nil, physical joining 500 rupees, physical annual 750 rupees waived on spends of 150000 in the previous year. Use the fee for the bank that actually issued the card. Kiwi Neon is a separate membership, 999 rupees plus tax a year from 3 Feb 2025, not the card fee.",
+      "rewards": [
+        "Cards issued through the Kiwi app since 4 Jul 2024, without Neon: 1.5% on scan-and-pay, 0.5% on online payments. From 1 Jun 2025, Kiwis are counted on multiples of 100 rupees. Examples on the policy: 100 rupees scan-and-pay earns 6 Kiwis, 150 rupees still earns 6, 200 rupees earns 12. Online: 100 rupees earns 2 Kiwis.",
+        "1 Kiwi is worth 0.25 rupee. Redeem into the goaxb UPI account. Monthly cap on Kiwis is 1% of the card credit limit.",
+        "Excluded categories include fuel, jewellery, utilities, insurance, rent-related codes, government, education, tolls, and gift cards. The merchant code list is on the rewards policy.",
+        "Kiwi Neon, for cards issued since 4 Jul 2024: extra 2% on scan-and-pay and 0.5% on online, plus milestone cashback of 3%, 4%, and 5% at 50000, 100000, and 150000 rupees of eligible yearly spends, each minus cashback already earned that year. Milestone cashback is outside the monthly 1% cap. Confirm the user actually pays for Neon before using these rates."
+      ],
+      "good_for": ["UPI scan and pay", "small UPI merchant payments"],
+      "source_url": "https://gokiwi.in/rewards-policy-v2/",
+      "also_see": [
+        "https://gokiwi.in/",
+        "https://gokiwi.in/neon/neon2/",
+        "https://creditcard.pnb.bank.in/types18.html"
+      ],
+      "source_as_of": "2026-06-29",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30",
+      "notes": "Tiny payments earn nothing once the amount is under the next 100 rupees. Run the user's real transaction sizes through that rule before quoting 1.5%."
+    },
+    {
+      "id": "rbl-play",
+      "name": "RBL Bank Play Credit Card",
+      "issuer": "RBL Bank",
+      "segments": ["movies", "events"],
+      "joining_fee_inr": 500,
+      "annual_fee_inr": 500,
+      "fee_note": "500 rupees plus GST. RBL's MITC says the standard GST rate on fees is 18%. Next year's fee is waived after eligible spends of 150000 in the preceding anniversary year. From 15 Oct 2024 the waiver spend excludes fuel and auto, utilities, insurance, quasi-cash, railways, rent, education, wallets, government, contracted services, miscellaneous, Bills2Pay, and EMI conversion. BookMyShow Superstar customers, 10 BookMyShow transactions in an anniversary year and sourced through BookMyShow, also get the fee waived.",
+      "rewards": [
+        "This is a BookMyShow discount, not a percent back on every spend. Welcome: up to 500 rupees off BookMyShow if the first purchase is within 30 days of issuance, then usable within 90 days of issuance. Paid cards only.",
+        "Monthly: spend 5000 rupees in a billing cycle, then up to 500 rupees off BookMyShow. For movies, book at least two tickets, up to 250 rupees off each. The 500 rupees must be used in one transaction. Some categories do not count toward the 5000 rupees, including fuel, rent, wallet, insurance, utilities, cash, EMI, and government, and from 15 Oct 2024 also fuel and auto, railways, education, and Bills2Pay.",
+        "Food and drink: up to 100 rupees when booked with movie tickets on BookMyShow, once a month.",
+        "Fuel surcharge waiver on transactions from 500 to 4000 rupees, up to 100 rupees a month. GST on the fuel surcharge is not reversed."
+      ],
+      "good_for": ["BookMyShow movies", "BookMyShow events", "BookMyShow streams"],
+      "source_url": "https://www.rbl.bank.in/personal-banking/cards/credit-cards/rbl-bank-play-credit-card",
+      "also_see": [
+        "https://drws17a9qx558.cloudfront.net/document/credit-cards/play-credit-card-terms-and-conditions.pdf",
+        "https://webassets.rbl.bank.in/document/Credit%20Cards/CardsScheduleCharges.pdf"
+      ],
+      "source_as_of": "2024-10-15",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30",
+      "notes": "Count how many months in the uploaded statements would have crossed 5000 rupees of eligible spend. The saving is about 500 rupees in each of those months, minus the fee, not 500 rupees times 12 by default."
+    }
+  ],
+  "platform_offers": [
+    {
+      "id": "district-visa-bogo",
+      "name": "Visa Infinite and Visa Signature movie offer on District",
+      "platform": "District",
+      "what_it_is": "A dated offer, not a card's everyday earn rate.",
+      "benefit": "Buy one get one movie ticket on District, Fridays to Sundays, once a month per user. No minimum order. Offer handling charges may apply. Cinema partners can change.",
+      "valid_until": "2026-12-30",
+      "source_url": "https://in.review.visa.com/en_in/visa-offers-and-perks/district/180162",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "district-idfc-first-wealth",
+      "name": "IDFC FIRST Wealth movie offer on District",
+      "platform": "District",
+      "what_it_is": "A dated offer on one IDFC FIRST card. The card's own annual fee and everyday reward rate were not on the page that was read.",
+      "benefit": "250 rupees off the second ticket on the District app, twice per card per calendar month, code IDFCCCFW1, minimum two tickets. Needs settled spends of 20000 rupees in the previous calendar month. EMI principal, fees, charges, and GST do not count toward that 20000.",
+      "valid_until": "",
+      "source_url": "https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/FIRST-Wealth-Privileges.pdf",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30",
+      "notes": "The fetched PDF does not show an end date. Treat the offer as unconfirmed until the live PDF still lists it."
+    },
+    {
+      "id": "district-kotak-solitaire",
+      "name": "Kotak Solitaire offer on District and Zomato",
+      "platform": "District",
+      "what_it_is": "A dated offer, not the card's everyday earn rate. The Solitaire card's annual fee was not on this offer PDF.",
+      "benefit": "20% instant discount up to 5000 rupees, twice per card per month, code KOTAKSOLITAIRE, paid in the District or Zomato app. Covers District dining, Zomato dining, nightlife, movies, shopping, play, family activities, and amusement parks. Not on music concerts. Not on the convenience fee, cover charge, or tip.",
+      "valid_until": "2027-03-31",
+      "source_url": "https://images.kotak.bank.in/bank/mailers/2026/files/SolitaireDistrictTnC.pdf",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
     }
   ]
 }

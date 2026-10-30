@@ -35,3 +35,11 @@ def test_card_library_entries_are_dated_and_sourced():
         assert card["fetched_on"] <= payload["fetched_on"]
     assert "Zepto" in payload["quick_commerce"]["not_named_as_of_fetched_on"]
     assert "Blinkit" in payload["quick_commerce"]["not_named_as_of_fetched_on"]
+    ids = {card["id"] for card in cards}
+    assert {"sbi-bpcl", "sbi-bpcl-octane", "kiwi-rupay", "rbl-play"} <= ids
+    for offer in payload["platform_offers"]:
+        assert offer["source_url"].startswith("https://")
+        assert offer["platform"] == "District"
+        date.fromisoformat(offer["fetched_on"])
+        if offer["valid_until"]:
+            date.fromisoformat(offer["valid_until"])
