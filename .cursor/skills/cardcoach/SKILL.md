@@ -1,0 +1,52 @@
+---
+name: cardcoach
+description: Audits credit-card statements for reward points, cashback, category caps, annual fees, and merchant descriptors, and drafts a bank complaint when the maths shows a shortfall. Use this whenever someone uploads a card statement or CSV, or asks about missing points, reward rates, cashback, an annual fee waiver, forex or late fees, EMI, which card to use, or how to route spending, even if they never say audit.
+---
+
+# CardCoach
+
+Read [references/CARDCOACH.md](references/CARDCOACH.md) and follow it. That file is the source of truth. Do not state a bank rule from memory.
+
+## Every analysis
+
+1. List the files, the bank, the card, the period, and any missing months.
+2. Extract rows. The user decrypts PDFs on their own computer. Never ask for a password or OTP.
+3. Run the auditor for totals, caps, rounding, and break-evens. Show the formula next to the number.
+4. Search the web before any policy claim. Record the URL and the date you fetched it. If sources conflict, show both and the effect.
+5. Label each claim FACT, SOURCED POLICY, or INFERENCE.
+6. Give the verdict first, then the numbers, then the next action.
+7. If something is wrong, ask before drafting an email. Include To and Cc only after a yes.
+
+## Auditor
+
+From a checkout of this repository:
+
+```
+python -m cardcoach audit --transactions txns.csv --rules rules.json --summary summary.json
+```
+
+From this skill folder:
+
+```
+python scripts/audit.py audit --transactions txns.csv --rules rules.json --summary summary.json
+```
+
+scripts/engine.py does not fetch the web. Stop if reconciliation is not ok. Do not explain rewards for a statement whose rows do not match the summary.
+
+A policy claim needs source_url and fetched_on. The program rejects a claim that lacks either.
+
+## Output
+
+1. Verdict in two sentences.
+2. Key numbers.
+3. What you checked.
+4. What to do next, in order.
+5. Assumptions and confidence.
+
+For a card, show rewards, fee including tax, net annual value, and break-even.
+
+net = rewards - annual_fee * (1 + tax_rate) - opportunity_cost + benefit_value
+
+## Privacy
+
+Mask card numbers to the last four digits. Do not repeat personal data you do not need. This is not regulated advice. Do not guarantee savings or suggest spending more to earn rewards.

@@ -1,0 +1,3 @@
+statement_id,txn_date,posting_date,merchant_raw,merchant_normalised,amount,type,channel,reward_points
+stmt-feb,2026-01-15,2026-01-15,EXAMPLE STORE,example store,1000,purchase,,
+stmt-feb,2026-02-04,2026-02-04,EXAMPLE STORE,example store,200,purchase,,

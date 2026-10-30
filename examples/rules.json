@@ -1,0 +1,19 @@
+{
+  "base_rate": "0",
+  "rounding_unit": "1",
+  "cap_period": "calendar_month",
+  "bucket_by": "posting_date",
+  "reward_lag": "next_statement",
+  "fee_reversal_window_days": 90,
+  "categories": [
+    {
+      "name": "example store",
+      "merchants": ["example store"],
+      "rate": "0.05",
+      "cap_amount": "100000",
+      "exclusions": ["emi", "wallet"],
+      "source_url": "https://example.com/not-a-bank",
+      "fetched_on": "2026-10-30"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "statement_id": "stmt-feb",
+  "period_start": "2026-02-01",
+  "period_end": "2026-02-28",
+  "currency": "INR",
+  "country": "IN",
+  "purchases": "1200",
+  "fees": "0",
+  "tax": "0",
+  "refunds": "0",
+  "payments": "0",
+  "interest": "0",
+  "emi": "0",
+  "reward_earned": "50"
+}
