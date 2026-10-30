@@ -7,12 +7,24 @@ description: Audits credit-card statements for reward points, cashback, category
 
 Read [references/CARDCOACH.md](references/CARDCOACH.md) and follow it. That file is the source of truth. Do not state a bank rule from memory.
 
+## If they ask what you can do
+
+Answer from this list only. Do not add a feature that is not here. Then ask which one to start.
+
+- Read an unlocked statement and show where the money went.
+- Check reward points or cashback, including caps, rounding, and the month the bank counted.
+- Check fees, including an annual fee that might be reversed later.
+- Draft a bank email only after they agree.
+- Suggest another card from references/india-cards.json only after you check the issuer's website, using the months in the uploaded statements.
+- Flag quick-commerce spend that earned little or nothing, when a sourced rule covers that merchant.
+- Plan the month around caps.
+
 ## Every analysis
 
 1. List the files, the bank, the card, the period, and any missing months.
 2. Extract rows. The user decrypts PDFs on their own computer. Never ask for a password or OTP.
 3. Run the auditor for totals, caps, rounding, and break-evens. Show the formula next to the number.
-4. Search the web before any policy claim. Record the URL and the date you fetched it. If sources conflict, show both and the effect.
+4. Search the web before any policy claim. Record the URL and the date you fetched it. If sources conflict, show both and the effect. For another card, start from references/india-cards.json, then check the issuer page. If the page differs, use the page and update that card's last_updated, source URL, and figures.
 5. Label each claim FACT, SOURCED POLICY, or INFERENCE.
 6. Give the verdict first, then the numbers, then the next action.
 7. If something is wrong, ask before drafting an email. Include To and Cc only after a yes.

@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CANON = ROOT / "canon" / "CARDCOACH.md"
 ENGINE = ROOT / "src" / "cardcoach" / "engine.py"
+CARDS = ROOT / "library" / "india-cards.json"
 
 DESCRIPTION = (
     "Audits credit-card statements for reward points, cashback, category caps, "
@@ -32,6 +33,8 @@ Label each claim FACT (from the statement), SOURCED POLICY (URL and fetch date),
 
 Do every sum, cap, rounding step, and break-even in code, and show the formula. Mask card numbers to the last four. Never ask for a password or OTP. Tell the user to decrypt PDFs on their own computer.
 
+If they ask what you can do, list only the jobs in CARDCOACH.md. Do not invent features.
+
 Ask at most one question, and only if the answer changes the result. Give a two-sentence verdict first. Ask before you draft a bank email, and include To and Cc only if they agree.
 
 This is not regulated advice. Do not guarantee savings or suggest spending more to earn rewards.
@@ -44,6 +47,8 @@ Before the first analysis, read the project files CARDCOACH.md and cardcoach_aud
 Label every claim as one of: FACT (on the statement), SOURCED POLICY (URL plus the date you fetched it), or INFERENCE (from the numbers).
 
 Use browsing for every policy: the card page, the fee schedule, devaluations, and grievance contacts. Search by bank, card name, and the current year and month. If sources disagree, show both and the effect on the result. Never invent an email address or phone number.
+
+Before you suggest another card, read india-cards.json. It is a starting list with a last_updated date on each card. Open the bank's own page and use that if it differs, then update the card's fields, source URL, and last_updated. Savings use only the uploaded statements. Name the months. Compute extra reward minus extra fee including tax, minus what those spends already earned. Ask if they could have routed that spend. Do not tell them to spend more.
 
 Use the code interpreter for every sum, cap, rounding step, and break-even. Run cardcoach_audit.py when you can:
 
@@ -58,6 +63,8 @@ Detect country and currency from the statement. Mask card numbers to the last fo
 qpdf --password=YOUR_PASSWORD --decrypt statement.pdf statement-decrypted.pdf
 
 The user types the password in their own terminal.
+
+If they ask what you can do, list only these: read a statement, check rewards and caps, check fees, draft a complaint after they agree, suggest a card from their uploaded spend after checking the bank site, flag quick-commerce spend that earned little, and plan the month around caps. Do not invent extra features.
 
 Ask at most one question, and only when the answer changes the result. Otherwise state the assumption and continue.
 
@@ -90,12 +97,24 @@ HOST_SKILL = """# CardCoach
 
 Read [references/CARDCOACH.md](references/CARDCOACH.md) and follow it. That file is the source of truth. Do not state a bank rule from memory.
 
+## If they ask what you can do
+
+Answer from this list only. Do not add a feature that is not here. Then ask which one to start.
+
+- Read an unlocked statement and show where the money went.
+- Check reward points or cashback, including caps, rounding, and the month the bank counted.
+- Check fees, including an annual fee that might be reversed later.
+- Draft a bank email only after they agree.
+- Suggest another card from references/india-cards.json only after you check the issuer's website, using the months in the uploaded statements.
+- Flag quick-commerce spend that earned little or nothing, when a sourced rule covers that merchant.
+- Plan the month around caps.
+
 ## Every analysis
 
 1. List the files, the bank, the card, the period, and any missing months.
 2. Extract rows. The user decrypts PDFs on their own computer. Never ask for a password or OTP.
 3. Run the auditor for totals, caps, rounding, and break-evens. Show the formula next to the number.
-4. Search the web before any policy claim. Record the URL and the date you fetched it. If sources conflict, show both and the effect.
+4. Search the web before any policy claim. Record the URL and the date you fetched it. If sources conflict, show both and the effect. For another card, start from references/india-cards.json, then check the issuer page. If the page differs, use the page and update that card's last_updated, source URL, and figures.
 5. Label each claim FACT, SOURCED POLICY, or INFERENCE.
 6. Give the verdict first, then the numbers, then the next action.
 7. If something is wrong, ask before drafting an email. Include To and Cc only after a yes.
@@ -149,12 +168,24 @@ rounded = (amount // rounding_unit) * rounding_unit
 points = rounded * rate
 net = rewards - annual_fee * (1 + tax_rate) - opportunity_cost + benefit_value
 
+## If they ask what you can do
+
+Answer from this list only. Do not add a feature that is not here. Then ask which one to start.
+
+- Read an unlocked statement and show where the money went.
+- Check reward points or cashback, including caps, rounding, and the month the bank counted.
+- Check fees, including an annual fee that might be reversed later.
+- Draft a bank email only after they agree.
+- Suggest another card from references/india-cards.json only after you check the issuer's website, using the months in the uploaded statements.
+- Flag quick-commerce spend that earned little or nothing, when a sourced rule covers that merchant.
+- Plan the month around caps.
+
 ## Every analysis
 
 1. List the files, the bank, the card, the period, and any missing months.
 2. Extract rows. The user decrypts PDFs on their own computer. Never ask for a password or OTP.
 3. Compute totals, caps, rounding, and break-evens in code. Show the formula next to the number.
-4. Record the URL and the date you fetched each rule. If sources conflict, show both and the effect.
+4. Record the URL and the date you fetched each rule. If sources conflict, show both and the effect. For another card, start from references/india-cards.json, then check the issuer page. If the page differs, use the page and update that card's last_updated, source URL, and figures.
 5. Label each claim FACT, SOURCED POLICY, or INFERENCE.
 6. Give the verdict first, then the numbers, then the next action.
 7. If something is wrong, ask before drafting an email. Include To and Cc only after a yes.
@@ -192,6 +223,7 @@ def _write_skill(folder: Path, body: str) -> None:
     (folder / "scripts").mkdir()
     (folder / "SKILL.md").write_text(_skill_md(body), encoding="utf-8")
     shutil.copyfile(CANON, folder / "references" / "CARDCOACH.md")
+    shutil.copyfile(CARDS, folder / "references" / "india-cards.json")
     shutil.copyfile(ENGINE, folder / "scripts" / "engine.py")
     (folder / "scripts" / "audit.py").write_text(AUDIT_SCRIPT, encoding="utf-8")
 
@@ -208,8 +240,8 @@ def _zip_skill(folder: Path, destination: Path) -> None:
 
 
 def main() -> None:
-    if not CANON.is_file() or not ENGINE.is_file():
-        raise SystemExit("canon/CARDCOACH.md and src/cardcoach/engine.py are required.")
+    if not CANON.is_file() or not ENGINE.is_file() or not CARDS.is_file():
+        raise SystemExit("canon/CARDCOACH.md, library/india-cards.json, and src/cardcoach/engine.py are required.")
     if len(PROJECT_INSTRUCTIONS) > 6000:
         raise SystemExit(f"ChatGPT instructions are {len(PROJECT_INSTRUCTIONS)} characters.")
     if len(GEM_INSTRUCTIONS) > 1000:
@@ -232,6 +264,7 @@ def main() -> None:
     knowledge.mkdir(parents=True, exist_ok=True)
     (chatgpt / "PROJECT_INSTRUCTIONS.md").write_text(PROJECT_INSTRUCTIONS, encoding="utf-8")
     shutil.copyfile(CANON, knowledge / "CARDCOACH.md")
+    shutil.copyfile(CARDS, knowledge / "india-cards.json")
     shutil.copyfile(ENGINE, knowledge / "cardcoach_audit.py")
 
     dist = ROOT / "dist"
@@ -241,6 +274,7 @@ def main() -> None:
     chatgpt_dist.mkdir(parents=True)
     shutil.copyfile(chatgpt / "PROJECT_INSTRUCTIONS.md", chatgpt_dist / "PROJECT_INSTRUCTIONS.md")
     shutil.copyfile(knowledge / "CARDCOACH.md", chatgpt_dist / "CARDCOACH.md")
+    shutil.copyfile(knowledge / "india-cards.json", chatgpt_dist / "india-cards.json")
     shutil.copyfile(knowledge / "cardcoach_audit.py", chatgpt_dist / "cardcoach_audit.py")
     _zip_skill(claude, dist / "cardcoach-claude.zip")
     _zip_skill(gemini, dist / "cardcoach-gemini.zip")

@@ -1,0 +1,288 @@
+{
+  "library": "india-credit-cards",
+  "country": "IN",
+  "currency": "INR",
+  "fetched_on": "2026-10-30",
+  "how_to_use": "Starting point only. Before a suggestion, open the issuer page. If it differs, use the page and update this card: figures, source_url, fetched_on, last_updated, and notes. Savings use only the uploaded statements. Name those months. Compute extra reward minus extra fee including tax, minus rewards already earned. Ask if they could have routed that spend. Do not tell them to spend more.",
+  "quick_commerce": {
+    "named_in_this_file": ["Swiggy", "Swiggy Instamart", "Zomato"],
+    "not_named_as_of_fetched_on": ["Zepto", "Blinkit"],
+    "note": "Do not invent a rate for Zepto or Blinkit. Search the issuer page. Swiggy Instamart is named on the Swiggy HDFC card. Axis ACE names the Swiggy website and app, which may or may not include Instamart merchant IDs. Confirm before using it."
+  },
+  "cards": [
+    {
+      "id": "hdfc-millennia",
+      "name": "HDFC Bank Millennia Credit Card",
+      "issuer": "HDFC Bank",
+      "segments": ["online", "shopping", "movies", "dining"],
+      "joining_fee_inr": 1000,
+      "annual_fee_inr": 1000,
+      "fee_note": "Plus applicable taxes. GST applies on fees. Renewal fee waived after spend of 100000 in 12 months.",
+      "rewards": [
+        "5% CashPoints on Amazon, BookMyShow, Cult.fit, Flipkart, Myntra, Sony LIV, Swiggy, Tata CLiQ, Uber, and Zomato. Non-EMI only. Cap 1000 CashPoints per calendar month.",
+        "1% CashPoints on other spends except fuel, EMI, wallet, rent, and government transactions. Cap 1000 CashPoints per calendar month. Gift or prepaid card loads and voucher purchases fall in this 1% bucket.",
+        "Posted by calendar month of settlement, in the first week of the next month. 1 CashPoint = 1 rupee on statement credit. Minimum 500 points to redeem. A redemption fee applies: the 20 Jul 2026 terms say 50 rupees from 1 Aug 2024, while the Millennia product page says 99 rupees plus taxes per redemption. Show both until the bank page you open settles it.",
+        "Welcome 1000 CashPoints if the joining fee is paid. Quarterly vouchers of 1000 rupees on spends of 100000 or more in a calendar quarter, per the FAQ."
+      ],
+      "good_for": ["Amazon", "Flipkart", "Myntra", "Swiggy", "Zomato", "BookMyShow", "Cult.fit", "Uber", "Tata CLiQ"],
+      "source_url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf",
+      "also_see": [
+        "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Personal/Pay/Cards/Millennia+Cards/CashBack+Credit+Card/Millennia-Credit-Card-FAQs.pdf",
+        "https://www.hdfc.bank.in/millennia-cards"
+      ],
+      "source_as_of": "2026-07-20",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "hdfc-swiggy",
+      "name": "Swiggy HDFC Bank Credit Card",
+      "issuer": "HDFC Bank",
+      "segments": ["quick-commerce", "dining", "online"],
+      "joining_fee_inr": 500,
+      "annual_fee_inr": 500,
+      "fee_note": "Plus applicable taxes. Renewal waived on spends of 200000 or more in a year. Waiver spend excludes cash on call, balance transfer, and cash withdrawal.",
+      "rewards": [
+        "10% cashback on Swiggy app food orders, Instamart, and Dineout, up to 1500 rupees per billing cycle. Swiggy Money, Swiggy Liquor, and Swiggy Minis do not earn it.",
+        "5% cashback on listed online categories (apparels, electronics, department stores, personal care, local cabs, home decor, pet stores, pharmacies, discount stores, entertainment), up to 1500 rupees per billing cycle.",
+        "1% cashback on other categories, up to 500 rupees per billing cycle, except fuel, rent, EMI, wallet, jewellery, and government spends."
+      ],
+      "good_for": ["Swiggy", "Swiggy Instamart", "Dineout"],
+      "source_url": "https://www.hdfc.bank.in/credit-cards/swiggy-hdfc-bank-credit-card/fees-and-charges",
+      "also_see": [
+        "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-hdfc-bank-credit-card/pdf/faqs-swiggy.pdf"
+      ],
+      "source_as_of": "",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "hdfc-indianoil",
+      "name": "IndianOil HDFC Bank Credit Card",
+      "issuer": "HDFC Bank",
+      "segments": ["fuel", "groceries", "bills"],
+      "joining_fee_inr": 500,
+      "annual_fee_inr": 500,
+      "fee_note": "Plus applicable taxes. Product page: spend 50000 or above in the first year for a waiver on the renewal membership fee. 1% fuel surcharge waiver at Indian fuel stations, minimum 400 rupees a transaction, maximum 250 rupees a cycle.",
+      "rewards": [
+        "5% Fuel Points at IndianOil outlets. Cap 250 points a month in the first 6 months, then 150 points a month.",
+        "5% Fuel Points on groceries and bill payments, max 100 points per category per month, minimum transaction 150 rupees. Grocery MCCs named: 5411, 5499, 5921, 5462. Utility and telecom MCCs named: 4812, 4814, 4900.",
+        "Other spends, including UPI: 1 Fuel Point per 150 rupees. Excludes fuel, rent, jewellery, and government.",
+        "Redemption is not 1 point = 1 rupee. At IndianOil, 1 Fuel Point = 3 XRP = 0.96 rupee. Statement cashback is 1 Fuel Point = 0.20 rupee. Catalogue redemption is up to 0.20 rupee. Compute the saving from the redemption path, not from the headline 5%."
+      ],
+      "good_for": ["IndianOil", "groceries", "bill payments"],
+      "source_url": "https://www.hdfc.bank.in/credit-cards/indianoil-hdfc-bank-credit-card",
+      "also_see": [
+        "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/indian-oil-hdfc-bank-credit-card/T-and-C-Indian-Oil-Credit-Card.pdf"
+      ],
+      "source_as_of": "",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "sbi-cashback",
+      "name": "Cashback SBI Card",
+      "issuer": "SBI Card",
+      "segments": ["online", "offline", "shopping"],
+      "joining_fee_inr": 999,
+      "annual_fee_inr": 999,
+      "fee_note": "Plus applicable taxes. Renewal of 999 waived on annual spends of 200000 or more in the preceding year. MITC correct as on 23 Oct 2026.",
+      "rewards": [
+        "From 1 Apr 2026: 5% on online spends, cap 2000 rupees per statement cycle. 1% on offline point-of-sale spends, cap 2000 rupees per statement cycle. Combined cap 4000 rupees per statement cycle.",
+        "Cashback is on posting date, not the purchase date, and is credited within two working days of statement generation.",
+        "Not on merchant EMI, Flexipay EMI, utility, insurance, fuel, rent, wallet, school and education, jewellery, railways, and from 1 Apr 2026 also digital gaming, tolls, and government transactions. Fuel surcharge waiver is separate: 1% on fuel of 500 to 3000 rupees, max 100 rupees per statement."
+      ],
+      "good_for": ["online spends", "offline card spends"],
+      "source_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/most-important-terms-and-conditions/mitc-english.pdf",
+      "also_see": [
+        "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+        "https://www.sbicard.com/en/faq/cashback-sbi-card-faq.page"
+      ],
+      "source_as_of": "2026-10-23",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "sbi-bpcl",
+      "name": "BPCL SBI Card",
+      "issuer": "SBI Card",
+      "segments": ["fuel"],
+      "joining_fee_inr": 499,
+      "annual_fee_inr": 499,
+      "fee_note": "Plus applicable taxes. Renewal of 499 waived on annual spends of 100000 or more in the preceding year. MITC correct as on 23 Oct 2026. Activation bonus of 2000 points, stated as worth 500 rupees, after the joining fee is paid.",
+      "rewards": [
+        "13 reward points per 100 rupees on BPCL fuel, max 1300 points per statement cycle. 4 points = 1 rupee of fuel, so the bank calls the points 3.25% plus a 1% surcharge waiver, together 4.25% value back.",
+        "Surcharge waiver on transactions up to 4000 rupees, max 100 rupees a statement cycle. The terms also say a maximum of 10000 rupees a month.",
+        "Points depend on the BPCL merchant ID list, reviewed monthly."
+      ],
+      "good_for": ["BPCL"],
+      "source_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/travel/bpcl-tnc.pdf",
+      "also_see": [
+        "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/most-important-terms-and-conditions/mitc-english.pdf"
+      ],
+      "source_as_of": "2026-10-23",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "sbi-flipkart",
+      "name": "Flipkart SBI Card",
+      "issuer": "SBI Card",
+      "segments": ["shopping", "online"],
+      "joining_fee_inr": 500,
+      "annual_fee_inr": 500,
+      "fee_note": "Plus applicable taxes. Renewal of 500 waived on annual spends of 350000 or more in the preceding year. MITC correct as on 23 Oct 2026.",
+      "rewards": [
+        "Product page says earn up to 7.5% cashback on Flipkart, Myntra, and Cleartrip, a 250 rupee Flipkart gift card on fee realisation, and 1% fuel surcharge waiver up to 400 rupees per statement cycle.",
+        "The words 'up to 7.5%' are not a flat rate. Open the card terms and use the exact split before quoting a rupee saving."
+      ],
+      "good_for": ["Flipkart", "Myntra", "Cleartrip"],
+      "source_url": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
+      "also_see": [
+        "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/most-important-terms-and-conditions/mitc-english.pdf"
+      ],
+      "source_as_of": "2026-10-23",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "sbi-tata-neu-infinity",
+      "name": "Tata Neu Infinity SBI Credit Card",
+      "issuer": "SBI Card",
+      "segments": ["shopping", "groceries", "tata", "upi"],
+      "joining_fee_inr": 1499,
+      "annual_fee_inr": 1499,
+      "fee_note": "Plus applicable taxes. Renewal of 1499 waived on annual spends of 300000 or more in the preceding year. MITC correct as on 23 Oct 2026.",
+      "rewards": [
+        "Product page: 1499 NeuCoins as a welcome gift.",
+        "5% back as NeuCoins on non-EMI spends on the Tata Neu app or website and partner Tata brands.",
+        "1.5% back as NeuCoins on non-Tata UPI spends, on the RuPay variant.",
+        "8 domestic lounge visits a year, 2 a quarter, if the previous quarter had spends of 75000 rupees."
+      ],
+      "good_for": ["Tata Neu", "BigBasket", "Croma", "Westside"],
+      "source_url": "https://www.sbicard.com/en/personal/sbi-credit-card.page",
+      "also_see": [
+        "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/most-important-terms-and-conditions/mitc-english.pdf"
+      ],
+      "source_as_of": "2026-10-23",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30",
+      "notes": "BigBasket, Croma, and Westside are Tata brands. Confirm on the current partner list before counting a transaction. The product page says partner Tata brands, and does not name each store in the snippet used here."
+    },
+    {
+      "id": "sbi-simplyclick",
+      "name": "SimplyCLICK SBI Card",
+      "issuer": "SBI Card",
+      "segments": ["online"],
+      "joining_fee_inr": 499,
+      "annual_fee_inr": 499,
+      "fee_note": "Plus applicable taxes. Renewal of 499 waived on annual spends of 100000 or more in the preceding year. MITC correct as on 23 Oct 2026. Welcome Amazon Pay gift card of 500 rupees is in the 1 Sep 2025 terms.",
+      "rewards": [
+        "10X reward points on exclusive partner brands, only on payments in rupees. Wallet loads on MCCs 6540 and 6541 do not earn points. Cleartrip or Yatra bookings through affiliate channels do not get 10X.",
+        "5X on other online spends, capped at 10000 reward points per calendar month. After that cap, every 100 rupees earns 1 reward point.",
+        "The terms do not state a rupee value per point in the section read on 30 Oct 2026. Do not invent one. Cash advance, balance transfer, Flexipay, and offline fuel MCCs 5172, 5541, 5983, and 5542 are excluded."
+      ],
+      "good_for": ["online partner brands"],
+      "source_url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/SimplyClick-TnC.pdf",
+      "also_see": [
+        "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/most-important-terms-and-conditions/mitc-english.pdf"
+      ],
+      "source_as_of": "2025-09-01",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "amazon-pay-icici",
+      "name": "Amazon Pay ICICI Bank Credit Card",
+      "issuer": "ICICI Bank",
+      "segments": ["online", "shopping", "amazon"],
+      "joining_fee_inr": 0,
+      "annual_fee_inr": 0,
+      "fee_note": "No joining fee and no annual fee, on the ICICI terms page.",
+      "rewards": [
+        "Ask if they have Amazon Prime. Prime members: 5% on eligible Amazon.in purchases and on flights and hotels booked on Amazon.in. Non-Prime: 3% on those.",
+        "2% on Amazon.in bills and recharges (not rent, tax, or education), Amazon Pay gift cards, digitally fulfilled categories, e-books, and Amazon Pay login-and-pay partner merchants.",
+        "1% on other spends outside Amazon.in. Excludes EMI, post-facto EMI, fuel, rent, education, utilities, and international spends.",
+        "No expiry and no earnings cap stated on the Amazon help page. Credited as Amazon Pay balance within 2 working days after the billing cycle. Forex markup 1.99% from 11 Oct 2025, on the ICICI newsroom note. Fuel surcharge waiver of 1%."
+      ],
+      "good_for": ["Amazon", "Amazon flights and hotels"],
+      "source_url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=TBrdZKM30gkoQZDW4B",
+      "also_see": [
+        "https://www.icici.bank.in/personal-banking/cards/credit-card/amazon-pay-credit-card",
+        "https://www.icicibank.com/personal-banking/cards/credit-card/amazon-pay-credit-card/terms-conditions",
+        "https://www.icici.bank.in/about-us/news-room/2025/amazon-pay-and-icici-bank-renew-partnership-enhance-indias-most-adopted-co-branded-credit-card"
+      ],
+      "source_as_of": "2025-10-11",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30"
+    },
+    {
+      "id": "axis-ace",
+      "name": "Axis Bank ACE Credit Card",
+      "issuer": "Axis Bank",
+      "segments": ["dining", "utilities", "online"],
+      "joining_fee_inr": 0,
+      "annual_fee_inr": 499,
+      "fee_note": "Joining fee nil. Annual fee 499 rupees, waived on spends of 200000 in the preceding card anniversary year. From the Axis MITC.",
+      "rewards": [
+        "From 20 Apr 2024: 5% on bill payments and recharges through Google Pay on Android only (postpaid, prepaid, DTH, electricity, water, gas, LPG, broadband). 4% on Swiggy, Zomato, and Ola, on the website or app.",
+        "The 5% and 4% cashback together are capped at 500 rupees per statement.",
+        "1.5% on other eligible spends, with no cap stated. Rounded to the nearest rupee on each transaction.",
+        "No cashback on fuel, EMI, wallet loads, rent, gold or jewellery, insurance, education, card fees, or utilities outside Google Pay."
+      ],
+      "good_for": ["Swiggy", "Zomato", "Ola", "Google Pay bill payments"],
+      "source_url": "https://www.axisbank.com/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf",
+      "also_see": [
+        "https://www.axisbank.com/docs/default-source/default-document-library/mitc-credit-cards.pdf"
+      ],
+      "source_as_of": "2024-04-20",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30",
+      "notes": "The cashback terms are older than a year. Treat the rates as uncertain until the live Axis page confirms them."
+    },
+    {
+      "id": "axis-atlas",
+      "name": "Axis Bank Atlas Credit Card",
+      "issuer": "Axis Bank",
+      "segments": ["travel"],
+      "joining_fee_inr": 5000,
+      "annual_fee_inr": 5000,
+      "fee_note": "Joining and annual fee 5000 rupees. The miles terms say the annual fee payment is 5000 rupees plus GST. Add-on fee nil on the MITC.",
+      "rewards": [
+        "5 EDGE Miles per 100 rupees on Axis Travel EDGE, direct airline, and direct hotel spends. Cap: the 5-mile rate applies up to 200000 rupees of those spends a month, then 2 miles per 100 rupees.",
+        "Bookings through travel agents and online travel agencies earn the base 2 miles per 100 rupees, not 5.",
+        "The terms say 1 EDGE Mile equals 1 rupee. That is their stated currency, not a promise you can cash it out. Miles cannot be encashed. Check transfer ratios on the live page before calling them cash.",
+        "Welcome benefit for paid cards sourced from 20 Apr 2024: 2500 EDGE Miles after 1 transaction within 37 days of issuance."
+      ],
+      "good_for": ["direct airline", "direct hotel", "Axis Travel EDGE"],
+      "source_url": "https://www.axisbank.com/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf",
+      "also_see": [
+        "https://www.axisbank.com/docs/default-source/default-document-library/mitc-credit-cards.pdf"
+      ],
+      "source_as_of": "2024-04-20",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30",
+      "notes": "Welcome and travel earn rules in the fetched terms date from April 2024. Confirm on the live page before suggesting the card."
+    },
+    {
+      "id": "axis-indianoil",
+      "name": "IndianOil Axis Bank Credit Card",
+      "issuer": "Axis Bank",
+      "segments": ["fuel"],
+      "joining_fee_inr": 500,
+      "annual_fee_inr": 500,
+      "fee_note": "Joining 500 and annual 500 on the Axis MITC. Add-on fee nil. A spend waiver for this exact variant was not in the fee row that was read. Confirm the waiver on the product page.",
+      "rewards": [
+        "The MITC says IndianOil Axis Bank Premium cardholders get a fuel surcharge benefit of 1% of the transaction amount, only at authorised IndianOil outlets.",
+        "Accelerated fuel reward points were not in the pages read on 30 Oct 2026. Do not guess them. Open the IndianOil Axis product page before suggesting a rupee saving."
+      ],
+      "good_for": ["IndianOil"],
+      "source_url": "https://www.axisbank.com/docs/default-source/default-document-library/mitc-credit-cards.pdf",
+      "also_see": [],
+      "source_as_of": "",
+      "fetched_on": "2026-10-30",
+      "last_updated": "2026-10-30",
+      "notes": "Fee is sourced. The reward rate is incomplete on purpose."
+    }
+  ]
+}

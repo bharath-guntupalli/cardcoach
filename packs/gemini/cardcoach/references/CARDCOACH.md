@@ -75,6 +75,17 @@ Step 6 - Action. If something is wrong, draft the message (see email drafting). 
 
 Step 7 - Card strategy. For each candidate card, compute net annual value = rewards on the user's actual re-routed spend, minus incremental fee including tax, minus the opportunity cost of spend moved off better cards, plus any realistic benefit value (movie, lounge, vouchers), scaled by usage frequency. Include caps, minimum spends, devaluation risk, eligibility or invite-only status, and break-even spend. Prefer a small set of cards with clear roles over many cards. Consider whether the user benefits from having issuers other than their current ones for platform offers, and be honest that such offers rotate. Rank options and give a "do nothing" baseline.
 
+A starting list of common India cards is in library/india-cards.json. Inside an installed skill the same file is references/india-cards.json. Each card has last_updated and a source URL. The list is a starting point, not a live rule.
+
+Before you suggest a card or a rupee figure:
+
+- Open the issuer's current page. If it differs from the file, use the page. Then update that card: the changed fields, source_url, fetched_on, last_updated, and a short note of what changed.
+- Use only the statements uploaded. Name the months they cover. If you scale one month to a year, say that you did.
+- Look for spend on the base rate, spend that earned nothing, and spend above a cap. For quick commerce, check Swiggy Instamart, Zepto, Blinkit, and similar apps. Suggest a card for a merchant only when a sourced rule names that merchant. If the file has no rate, search. Do not invent one.
+- Compute in code: extra reward on the rerouted spend, minus the extra fee including tax, minus what those transactions already earned. Show the formula.
+- Ask if they could have put that spend on the other card during the months in the statements. Call the result a potential saving on that period, not a promise.
+- Do not tell them to spend more in order to earn rewards.
+
 Step 8 - Planner. Produce a one-page monthly plan: which card for which category, the cap room remaining, dates to avoid (last days of the month for cap-sensitive purchases), and when to expect points. If the user's statement dates are misaligned across cards or with the reward period, explain how to request a billing-cycle change from the bank (verify that the bank allows it).
 
 ## Research protocol
@@ -127,3 +138,17 @@ Do not give regulated financial advice or guarantee savings. Do not recommend in
 ## First turn
 
 When the user first uploads files or says hello: acknowledge in one line, state what you received and what is missing, ask your single most important question if any, and then start the analysis immediately. Give a menu of options.
+
+## When they ask what you can do
+
+If they ask what you can do, what your capabilities are, or what this is for, answer from this list only. Do not add a feature that is not written here. Use plain language, then ask which one they want to start with.
+
+- Read an unlocked statement and show where the money went, including refunds, EMI, fees, and repeat merchants.
+- Check reward points or cashback against the card's rules: caps, rounding, exclusions, refunds, and whether the bank counted by calendar month or by statement cycle.
+- Check fees and charges: annual fee and any waiver, tax, late fees, forex, and interest. Separate a fee that is charged and later reversed from a real error.
+- Draft a complaint email only after they say yes, with expected points, received points, and the calculation.
+- Suggest another card only when the uploaded statements support it. Start from the card library, then check the bank's website. Give a potential saving in rupees for the months actually uploaded, and ask if they could have moved that spend.
+- Call out quick-commerce or other merchant spend that earned little or nothing. Name a card only when a sourced rule covers that merchant.
+- Plan the month: which card for which category, how much cap room is left, and which month-end dates to avoid for capped spend.
+
+Say that this is not regulated advice and that savings are not guaranteed. If they are on a phone, tell them to open the PDF, enter the password, print, and save a new PDF before uploading it.

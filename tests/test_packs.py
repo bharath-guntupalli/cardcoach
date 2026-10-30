@@ -22,6 +22,9 @@ def test_packs_stay_within_platform_limits():
     engine = (ROOT / "src" / "cardcoach" / "engine.py").read_bytes()
     assert (ROOT / "packs" / "chatgpt" / "knowledge" / "cardcoach_audit.py").read_bytes() == engine
     assert (ROOT / "dist" / "chatgpt" / "cardcoach_audit.py").read_bytes() == engine
+    cards = (ROOT / "library" / "india-cards.json").read_bytes()
+    assert (ROOT / "packs" / "claude" / "cardcoach" / "references" / "india-cards.json").read_bytes() == cards
+    assert (ROOT / "dist" / "chatgpt" / "india-cards.json").read_bytes() == cards
 
     instructions = (ROOT / "packs" / "chatgpt" / "PROJECT_INSTRUCTIONS.md").read_text(encoding="utf-8")
     assert len(instructions) <= 6000
@@ -47,4 +50,5 @@ def test_packs_stay_within_platform_limits():
         with zipfile.ZipFile(ROOT / "dist" / archive_name) as archive:
             names = archive.namelist()
         assert "cardcoach/SKILL.md" in names
+        assert "cardcoach/references/india-cards.json" in names
         assert all(name.startswith("cardcoach/") for name in names)

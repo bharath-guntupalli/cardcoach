@@ -22,10 +22,10 @@ Source: [Create and manage skills](https://support.google.com/gemini/answer/1709
 
 ### ChatGPT
 
-1. Download the three files in [dist/chatgpt/](dist/chatgpt/): `PROJECT_INSTRUCTIONS.md`, `CARDCOACH.md`, and `cardcoach_audit.py`.
+1. Download the files in [dist/chatgpt/](dist/chatgpt/): `PROJECT_INSTRUCTIONS.md`, `CARDCOACH.md`, `india-cards.json`, and `cardcoach_audit.py`.
 2. On [chatgpt.com](https://chatgpt.com), create a project named CardCoach.
 3. Open project settings and paste `PROJECT_INSTRUCTIONS.md` into the instructions. The file is under 6,000 characters.
-4. Add `CARDCOACH.md` and `cardcoach_audit.py` as project files. Leave room for a statement. A free project allows 5 files.
+4. Add `CARDCOACH.md`, `india-cards.json`, and `cardcoach_audit.py` as project files. Leave room for a statement. A free project allows 5 files.
 5. In a chat inside that project, upload only your own unlocked statement.
 
 Source: [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt). Project instructions replace the account-wide custom instructions. Those account-wide boxes hold 1,500 characters on Free and Go, and 5,000 on paid plans. This pack uses the project box.
@@ -68,7 +68,7 @@ Do this once, from the account that owns the pack. If a product gives you a URL,
 
 ### ChatGPT
 
-Create the project as above, with the two knowledge files and no statement. Keep that project as your own.
+Create the project as above, with those files and no statement. Keep that project as your own.
 
 A new custom GPT link is not available on a personal account. OpenAI's help, fetched 30 Oct 2026, says Free, Go, Plus, and Pro accounts cannot create a new GPT: [Sharing and publishing GPTs](https://help.openai.com/en/articles/8798878-sharing-and-publishing-gpts).
 

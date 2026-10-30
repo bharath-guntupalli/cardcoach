@@ -97,6 +97,7 @@ python3 -m pytest
 
 ```text
 canon/CARDCOACH.md          master instructions the skill follows
+library/india-cards.json    starting list of common India cards, each dated
 src/cardcoach/              the maths, with tests
 packs/build_packs.py        builds the zips from canon/CARDCOACH.md
 packs/claude/cardcoach/     Claude skill
